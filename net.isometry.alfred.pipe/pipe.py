@@ -71,8 +71,8 @@ def match_aliases(_dict, query):
         if (pipe != query) and fnmatch(alias, u'{}*'.format(query)):
             results.append(alfred.Item(
                 attributes = {'uid': u'pipe:{}'.format(pipe) , 'arg': pipe, 'autocomplete': pipe},
-                title = pipe,
-                subtitle = u'(alias: {})'.format(alias),
+                subtitle = pipe,
+                title = u'{} (alias)'.format(alias),
                 icon = u'icon.png'
             ))
     return results
@@ -83,11 +83,14 @@ def fetch_builtins(_path=_BUILTINS_FILE):
 def match_builtins(_dict, query):
     results = []
     for (pipe, desc) in _dict.iteritems():
-        if fnmatch(pipe, u'*{}*'.format(query)) or fnmatch(desc, u'*{}*'.format(query)):
+        lower_pipe = pipe.lower()
+        lower_query = query.lower()
+        lower_desc = desc.lower()
+        if (query == '') or (lower_query in lower_pipe) or (lower_query in lower_desc):
             results.append(alfred.Item(
                 attributes = {'uid': u'pipe:{}'.format(pipe) , 'arg': pipe, 'autocomplete': pipe},
-                title = pipe,
-                subtitle = u'(builtin: {})'.format(desc),
+                subtitle = pipe,
+                title = u'{} (builtin)'.format(desc),
                 icon = u'icon.png'
             ))
     return results
@@ -108,9 +111,6 @@ def complete(query, maxresults=_MAX_RESULTS):
         return define_alias(aliases, query[6:])
 
     results = []
-
-    if query not in builtins:
-        results.append(verbatim(query))
 
     for matches in (
         match_aliases(aliases, query),

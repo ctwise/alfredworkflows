@@ -6,11 +6,11 @@
 	<string>net.isometry.alfred.pipe</string>
 	<key>connections</key>
 	<dict>
-		<key>64D17591-D71C-421B-B701-91E99A3C0318</key>
+		<key>16039760-F173-4AB8-9C73-DA7401D5DE23</key>
 		<array>
 			<dict>
 				<key>destinationuid</key>
-				<string>D029EE08-8642-404B-83FE-BB5DFEE9C6B6</string>
+				<string>E5F84228-D31B-419C-AAB1-D34455F526D8</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -39,33 +39,11 @@
 				<string></string>
 			</dict>
 		</array>
-		<key>CCEE8787-6024-46B4-B155-240F86561281</key>
-		<array>
-			<dict>
-				<key>destinationuid</key>
-				<string>E8AC122D-DD51-491F-A734-C89446EB1924</string>
-				<key>modifiers</key>
-				<integer>0</integer>
-				<key>modifiersubtext</key>
-				<string></string>
-			</dict>
-		</array>
-		<key>D029EE08-8642-404B-83FE-BB5DFEE9C6B6</key>
-		<array>
-			<dict>
-				<key>destinationuid</key>
-				<string>0FCF109F-A181-4D53-A4DB-DB54DA7440B8</string>
-				<key>modifiers</key>
-				<integer>0</integer>
-				<key>modifiersubtext</key>
-				<string></string>
-			</dict>
-		</array>
 		<key>D637E280-521E-432F-85C1-3F58E064A66E</key>
 		<array>
 			<dict>
 				<key>destinationuid</key>
-				<string>74681B4B-CBE4-403F-BDF7-39F4D2319ABD</string>
+				<string>16A0B1DE-8566-439C-9DE4-B26A803C6C4B</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -86,38 +64,28 @@
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>action</key>
-				<integer>0</integer>
-				<key>argument</key>
-				<integer>0</integer>
-				<key>hotkey</key>
-				<integer>42</integer>
-				<key>hotmod</key>
-				<integer>1179648</integer>
-				<key>hotstring</key>
-				<string>|</string>
-				<key>leftcursor</key>
-				<false/>
-				<key>modsmode</key>
-				<integer>0</integer>
+				<key>autopaste</key>
+				<true/>
+				<key>clipboardtext</key>
+				<string>{query}</string>
 			</dict>
 			<key>type</key>
-			<string>alfred.workflow.trigger.hotkey</string>
+			<string>alfred.workflow.output.clipboard</string>
 			<key>uid</key>
-			<string>D637E280-521E-432F-85C1-3F58E064A66E</string>
+			<string>E5F84228-D31B-419C-AAB1-D34455F526D8</string>
 		</dict>
 		<dict>
 			<key>config</key>
 			<dict>
 				<key>argumenttype</key>
-				<integer>0</integer>
+				<integer>1</integer>
 				<key>escaping</key>
-				<integer>0</integer>
+				<integer>4</integer>
 				<key>keyword</key>
 				<string>|</string>
 				<key>script</key>
 				<string>from pipe import complete
-print complete("""{query}""")</string>
+print complete("{query}")</string>
 				<key>title</key>
 				<string>Pipe clipboard through one-liner</string>
 				<key>type</key>
@@ -133,19 +101,6 @@ print complete("""{query}""")</string>
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>autopaste</key>
-				<true/>
-				<key>clipboardtext</key>
-				<string>{query}</string>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.output.clipboard</string>
-			<key>uid</key>
-			<string>0FCF109F-A181-4D53-A4DB-DB54DA7440B8</string>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
 				<key>escaping</key>
 				<integer>0</integer>
 				<key>script</key>
@@ -156,45 +111,7 @@ print complete("""{query}""")</string>
 			<key>type</key>
 			<string>alfred.workflow.action.script</string>
 			<key>uid</key>
-			<string>D029EE08-8642-404B-83FE-BB5DFEE9C6B6</string>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>action</key>
-				<integer>0</integer>
-				<key>argument</key>
-				<integer>1</integer>
-				<key>hotkey</key>
-				<integer>42</integer>
-				<key>hotmod</key>
-				<integer>1310720</integer>
-				<key>hotstring</key>
-				<string>\</string>
-				<key>leftcursor</key>
-				<false/>
-				<key>modsmode</key>
-				<integer>0</integer>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.trigger.hotkey</string>
-			<key>uid</key>
-			<string>CCEE8787-6024-46B4-B155-240F86561281</string>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>applescript</key>
-				<string>on alfred_script(q)
-	tell application "Alfred 2" to search "|| "
-end alfred_script</string>
-				<key>cachescript</key>
-				<true/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.action.applescript</string>
-			<key>uid</key>
-			<string>E8AC122D-DD51-491F-A734-C89446EB1924</string>
+			<string>16039760-F173-4AB8-9C73-DA7401D5DE23</string>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -202,36 +119,12 @@ end alfred_script</string>
 				<key>argumenttype</key>
 				<integer>0</integer>
 				<key>escaping</key>
-				<integer>0</integer>
-				<key>keyword</key>
-				<string>||</string>
-				<key>script</key>
-				<string>from pipe import complete
-print complete("""{query}""")</string>
-				<key>title</key>
-				<string>Pipe clipboard through one-liner and paste</string>
-				<key>type</key>
-				<integer>3</integer>
-				<key>withspace</key>
-				<true/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.input.scriptfilter</string>
-			<key>uid</key>
-			<string>64D17591-D71C-421B-B701-91E99A3C0318</string>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>argumenttype</key>
-				<integer>0</integer>
-				<key>escaping</key>
-				<integer>0</integer>
+				<integer>4</integer>
 				<key>keyword</key>
 				<string>pipe</string>
 				<key>script</key>
 				<string>from pipe import complete
-print complete("""{query}""")</string>
+print complete("{query}")</string>
 				<key>title</key>
 				<string>Pipe clipboard through one-liner</string>
 				<key>type</key>
@@ -247,17 +140,40 @@ print complete("""{query}""")</string>
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>escaping</key>
+				<key>action</key>
 				<integer>0</integer>
+				<key>argument</key>
+				<integer>1</integer>
+				<key>hotkey</key>
+				<integer>44</integer>
+				<key>hotmod</key>
+				<integer>1835008</integer>
+				<key>hotstring</key>
+				<string>/</string>
+				<key>leftcursor</key>
+				<false/>
+				<key>modsmode</key>
+				<integer>0</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.trigger.hotkey</string>
+			<key>uid</key>
+			<string>D637E280-521E-432F-85C1-3F58E064A66E</string>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>escaping</key>
+				<integer>4</integer>
 				<key>script</key>
-				<string>pbpaste | {query} | pbcopy</string>
+				<string>osascript -e 'tell application "Alfred 2" to search "| "'</string>
 				<key>type</key>
-				<integer>5</integer>
+				<integer>0</integer>
 			</dict>
 			<key>type</key>
 			<string>alfred.workflow.action.script</string>
 			<key>uid</key>
-			<string>16039760-F173-4AB8-9C73-DA7401D5DE23</string>
+			<string>16A0B1DE-8566-439C-9DE4-B26A803C6C4B</string>
 		</dict>
 	</array>
 	<key>readme</key>
@@ -269,53 +185,38 @@ print complete("""{query}""")</string>
 | …your one-liner of choice.</string>
 	<key>uidata</key>
 	<dict>
-		<key>0FCF109F-A181-4D53-A4DB-DB54DA7440B8</key>
-		<dict>
-			<key>ypos</key>
-			<real>420</real>
-		</dict>
 		<key>16039760-F173-4AB8-9C73-DA7401D5DE23</key>
 		<dict>
 			<key>ypos</key>
-			<real>60</real>
+			<real>10</real>
 		</dict>
-		<key>64D17591-D71C-421B-B701-91E99A3C0318</key>
+		<key>16A0B1DE-8566-439C-9DE4-B26A803C6C4B</key>
 		<dict>
 			<key>ypos</key>
-			<real>420</real>
+			<real>280</real>
 		</dict>
 		<key>74681B4B-CBE4-403F-BDF7-39F4D2319ABD</key>
 		<dict>
 			<key>ypos</key>
-			<real>60</real>
+			<real>10</real>
 		</dict>
 		<key>880D9394-A59A-4BC1-BB46-01461CEFEE80</key>
 		<dict>
 			<key>ypos</key>
-			<real>180</real>
-		</dict>
-		<key>CCEE8787-6024-46B4-B155-240F86561281</key>
-		<dict>
-			<key>ypos</key>
-			<real>300</real>
-		</dict>
-		<key>D029EE08-8642-404B-83FE-BB5DFEE9C6B6</key>
-		<dict>
-			<key>ypos</key>
-			<real>420</real>
+			<real>140</real>
 		</dict>
 		<key>D637E280-521E-432F-85C1-3F58E064A66E</key>
 		<dict>
 			<key>ypos</key>
-			<real>60</real>
+			<real>280</real>
 		</dict>
-		<key>E8AC122D-DD51-491F-A734-C89446EB1924</key>
+		<key>E5F84228-D31B-419C-AAB1-D34455F526D8</key>
 		<dict>
 			<key>ypos</key>
-			<real>300</real>
+			<real>10</real>
 		</dict>
 	</dict>
 	<key>webaddress</key>
-	<string>https://github.com/isometry/alfredworkflows/tree/master/net.isometry.alfred.pipe</string>
+	<string>https://github.com/isometry/alfredworkflows</string>
 </dict>
 </plist>
